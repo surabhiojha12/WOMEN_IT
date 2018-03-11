@@ -25,7 +25,7 @@ firebase.database().ref('users/' + user.uid).set({
 
 
 window.alert('success');
-window.location.replace("course.html");
+
 
 
 }
