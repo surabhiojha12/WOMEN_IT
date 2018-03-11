@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<title></title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="icon" type="image/png" href="logo.png"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<style>
+html,body,h1,h2,h3,h4 {font-family:"Lato", sans-serif}
+.mySlides {display:none}
+.w3-tag, .fa {cursor:pointer}
+.w3-tag {height:15px;width:15px;padding:0;margin-top:6px}
+.w3-card-4:hover{
+  box-shadow: grey;
+
+}
+.sam{
+  height: 200px;
+}
+
+
+</style>
+<body>
+
+<!-- Links (sit on top) -->
+<div class="w3-top">
+
+  <div class="w3-row w3-large  w3-indigo" style="font-style: italic;">
+    <div class="w3-col s3">
+      <a href="index.html" class="w3-button  w3-block"><i class="fa fa-home"></i> Home</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="course.html" class="w3-button w3-block"><i class="fa fa-pencil-square-o"></i> Courses</a>
+    </div>
+
+    <div class="w3-col s3">
+      <a href="job.html" class="w3-button  w3-block"><i class="fa fa-money"></i> Jobs</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="profile.html" class="w3-button w3-block"><i class="fa fa-user-circle"></i> Profile</a>
+    </div>
+
+  </div>
+</div>
+
+<!-- Content -->
+<div class="w3-content" style="max-width:1100px;margin-top:80px;margin-bottom:80px">
+
+  <div class="w3-panel">
+    <h1><b>UPLOAD COURSES</b></h1>
+    <hr>
+    <p></p>
+  </div>
+  <div class="w3-row w3-container">
+      <div class="w3-center w3-padding-64">
+        <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">Upload Courses</span>
+      </div>
+      <div class="w3-col l3 m6 w3-light-blue w3-margin-bottom w3-container w3-padding-16 sam">
+        <h3>Choose a course</h3>
+        <p>Choose a course of your choice.</p>
+      </div>
+
+      <div class="w3-col l3 m6 w3-cyan w3-margin-bottom w3-container w3-padding-16 sam">
+        <h3>Select Modules</h3>
+        <p>Select the modules in the course.</p>
+      </div>
+
+      <div class="w3-col l3 m6 w3-blue w3-margin-bottom w3-container w3-padding-16 sam">
+        <h3>Enter Details</h3>
+        <p>Enter the details of the course.</p>
+      </div>
+
+      <div class="w3-col l3 m6 w3-indigo w3-margin-bottom w3-container w3-padding-16 sam">
+        <h3>Upload</h3>
+        <p>Upload the course for the public use by giving video links and a google drive link of documentation.</p>
+      </div>
+  </div>
+<!--end-->
+<div class="w3-row-padding" id="about">
+    <div class="w3-center w3-padding-64">
+      <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">Upload a Course</span>
+    </div>
+
+
+<div  class=" w3-container  ">
+
+
+  <div class="w3-section">
+  <p>
+  <input class="w3-check " type="checkbox" checked="checked" required>
+  <label>Vocational Courses</label></p>
+
+  <p>
+  <input class="w3-check" type="checkbox" disabled>
+  <label>Academic Courses(Opening Shortly)</label></p>
+  </div>
+  <div class="w3-section">
+      <label>Title</label>
+      <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" id="tit" type="text" name="country" required>
+    </div>
+    <div class="w3-section">
+      <label>Course level (basic/medium/advance)</label>
+      <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" id="lev" type="text" name="city" required>
+    </div>
+    <div class="w3-section">
+      <label>One line description</label>
+      <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" id="des" type="text" name="title" required>
+    </div>
+    <div class="w3-section">
+      <label>Number Of Lessons/Modules</label>
+      <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" id="no" type="text" name="title" required>
+    </div>
+    <div class="w3-section">
+      <label>Course Description (Include description for each lesson with YouTube Link)</label>
+      <textarea class="w3-input w3-border w3-hover-border-black" style="width:100%;" id="cd" rows="5" name="description" required></textarea>
+    </div>
+
+    <button type="submit" class="w3-button w3-block w3-indigo w3-hover-light-blue" onclick="upload()">Upload</button>
+
+
+
+
+
+
+  </div>
+</div>
+</div>
+<footer class="w3-container w3-padding-32 w3-light-grey w3-center">
+
+  <a href="#" class="w3-button w3-black w3-margin"><i class="fa fa-arrow-up" ></i></a>
+  <div class="w3-xlarge w3-section">
+    <i class="fa fa-facebook-official  w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity "></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity "></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity "></i>
+  </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+<script>
+// Initialize Firebase
+var config = {
+  apiKey: 'AIzaSyBNsNrL1MzxVnMzdyiLY6z0y4Fra1xRHCE',
+  authDomain: 'fir-example-feb98.firebaseapp.com',
+  databaseURL: 'https://fir-example-feb98.firebaseio.com',
+  projectId: 'fir-example-feb98',
+  storageBucket: 'fir-example-feb98.appspot.com',
+  messagingSenderId: '461213066300'
+};
+
+firebase.initializeApp(config);
+</script>
+<script src="log.js"></script>
+<script src="upload.js"></script>
+
+</body>
+</html>

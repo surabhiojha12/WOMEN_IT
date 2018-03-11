@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html>
+<title></title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Latest compiled and minified CSS -->
+<link rel="icon" type="image/png" href="logo.png"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<style>
+html,body,h1,h2,h3,h4 {font-family:"Lato", sans-serif}
+.mySlides {display:none}
+.w3-tag, .fa {cursor:pointer}
+.w3-tag {height:15px;width:15px;padding:0;margin-top:6px}
+.w3-card-4:hover{
+  box-shadow: grey;
+
+}
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+.form-signin
+{
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+}
+.form-signin .form-signin-heading, .form-signin .checkbox
+{
+    margin-bottom: 10px;
+}
+.form-signin .checkbox
+{
+    font-weight: normal;
+}
+.form-signin .form-control
+{
+    position: relative;
+    font-size: 16px;
+    height: auto;
+    padding: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.form-signin .form-control:focus
+{
+    z-index: 2;
+}
+.form-signin input[type="text"]
+{
+    margin-bottom: -1px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.form-signin input[type="password"]
+{
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+.account-wall
+{
+    margin-top: 20px;
+    padding: 40px 0px 20px 0px;
+    background-color: #f7f7f7;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+.login-title
+{
+    color: #555;
+    font-size: 18px;
+    font-weight: 400;
+    display: block;
+}
+.profile-img
+{
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 10px;
+    display: block;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+.need-help
+{
+    margin-top: 10px;
+}
+.new-account
+{
+    display: block;
+    margin-top: 10px;
+}
+#loginform{
+  padding-top:10%;
+  padding-bottom: 15%;
+  background: url(https://travelmoreandworryless.files.wordpress.com/2017/11/cover-gof-march.gif) no-repeat center center;
+  background-size: cover;
+}
+.sam{
+  height: 200px;
+}
+</style>
+<body>
+  <div id="loginform">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-md-4 col-md-offset-4">
+
+                <div class="account-wall">
+                  <img class="profile-img" src="logo.png" alt="">
+                    <div class="form-signin">
+                    <input type="text" class="form-control" placeholder="Email" id="em" required autofocus>
+                    <input type="password" class="form-control" placeholder="Password" id="pd" required>
+                    <button class="btn btn-lg btn-primary btn-block" onclick="login()">
+                        Sign in</button>
+                    <a href="logup.html" class="pull-left need-help">Create an account </a>
+                    <a href="#" class="pull-right need-help">Forgot Password </a><span class="clearfix"></span>
+                  </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+  </div>
+  <div id="main">
+<!-- Links (sit on top) -->
+<div class="w3-top">
+
+  <div class="w3-row w3-large  w3-indigo" style="font-style: italic;">
+    <div class="w3-col s3">
+      <a href="index.html" class="w3-button  w3-block"><i class="fa fa-home"></i> Home</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#" class="w3-button w3-block"><i class="fa fa-pencil-square-o"></i> Courses</a>
+    </div>
+
+    <div class="w3-col s3">
+      <a href="job.html" class="w3-button  w3-block"><i class="fa fa-money"></i> Jobs</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="profile.html" class="w3-button w3-block"><i class="fa fa-user-circle"></i> Profile</a>
+    </div>
+
+  </div>
+</div>
+
+<!-- Content -->
+<div class="w3-content" style="max-width:1100px;margin-top:80px;margin-bottom:80px">
+
+  <div class="w3-panel">
+    <h1><b>COURSES</b></h1>
+    <p></p>
+  </div>
+
+  <!-- Slideshow -->
+  <div class="w3-container">
+    <div class="w3-display-container mySlides">
+      <img class="w3-image" src="c1.jpg" style="width:100%;">
+
+      <div class="w3-display-topleft w3-container w3-padding-32">
+        <span class="w3-white w3-padding-large w3-animate-bottom">Tailoring</span>
+      </div>
+    </div>
+    <div class="w3-display-container mySlides">
+      <img src="c2.jpg" style="width:100%">
+      <div class="w3-display-middle w3-container w3-padding-32">
+        <span class="w3-white w3-padding-large w3-animate-bottom">Baking</span>
+      </div>
+    </div>
+    <div class="w3-display-container mySlides">
+      <img src="c3.jpg" style="width:100%">
+      <div class="w3-display-topright w3-container w3-padding-32">
+        <span class="w3-white w3-padding-large w3-animate-bottom">Mathematics Fundamentals</span>
+      </div>
+    </div>
+
+    <!-- Slideshow next/previous buttons -->
+    <div class="w3-container w3-blue w3-padding w3-xlarge">
+      <div class="w3-left" onclick="plusDivs(-1)"><i class="fa fa-arrow-circle-left w3-hover-text-teal"></i></div>
+      <div class="w3-right" onclick="plusDivs(1)"><i class="fa fa-arrow-circle-right w3-hover-text-teal"></i></div>
+
+      <div class="w3-center">
+        <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+        <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+        <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Grid -->
+  <div class="w3-row w3-container">
+    <div class="w3-center w3-padding-64">
+      <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">What We Offer</span>
+    </div>
+    <div class="w3-col l3 m6 w3-khaki w3-container w3-padding-16 sam">
+      <h3>Free Courses</h3>
+      <p>Choose from hundreds of free and professional courses offered by us.</p>
+    </div>
+
+    <div class="w3-col l3 m6 w3-yellow w3-container w3-padding-16 sam">
+      <h3>Consultation</h3>
+      <p>We Also offer consulation for jobs for females.</p>
+
+    </div>
+    <div class="w3-col l3 m6 w3-amber w3-container w3-padding-16 sam">
+      <h3>Course Kit</h3>
+      <p>The entire kit required for finishing the course will be provided by us in  subsised rate if u opt to choose us. </p>
+    </div>
+
+    <div class="w3-col l3 m6 w3-orange w3-container w3-padding-16 sam">
+      <h3>Certifications</h3>
+      <p>Get certified for the various skills you have.</p>
+    </div>
+  </div>
+
+
+
+  <!-- Grid -->
+  <div class="w3-row-padding" id="about">
+    <div class="w3-center w3-padding-64">
+      <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">Our Courses</span>
+    </div>
+    <div class="w3-row w3-small   w3-deep-purple w3-margin-bottom " style="font-style: italic;">
+  <h4><center >Vocational Courses</center></h4>
+</div>
+
+<div class="w3-third w3-margin-bottom w3-hover-shadow">
+      <div class="w3-card">
+
+        <div class="w3-container">
+          <h3>Tailoring</h3>
+          <p class="w3-opacity">Basic</p>
+          <p>Learn basic tailoring for daily needs.</p>
+          <p><a href="tailoring.html" target="_blank" ><button class="  button-course w3-button  w3-blue  w3-block">Start</button></a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-third w3-margin-bottom  w3-hover-shadow">
+      <div class="w3-card">
+
+        <div class="w3-container">
+          <h3>Baking</h3>
+          <p class="w3-opacity">Basic</p>
+          <p>Learn baking of cakes ,breads and more.</p>
+          <p><a href="baking.html" target="_blank" ><button class=" button-course w3-button  w3-blue w3-block">Start</button></a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-third w3-margin-bottom  w3-hover-shadow">
+      <div class="w3-card">
+
+        <div class="w3-container">
+          <h3>Beauty Parlour</h3>
+          <p class="w3-opacity">Basic</p>
+          <p>Learn haircutting,threading and much more.</p>
+          <p><button class="w3-button button-course   w3-brown  w3-block">Coming Soon</button></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="w3-row-padding" id="about">
+    <div class="w3-center w3-padding-20">
+      <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16"></span>
+    </div>
+    <div class="w3-row w3-small   w3-green w3-margin-bottom " style="font-style: italic;">
+  <h4><center >Academic Courses</center></h4>
+</div>
+<div class="w3-third w3-margin-bottom  w3-hover-shadow">
+      <div class="w3-card">
+
+        <div class="w3-container">
+          <h3>Spoken English</h3>
+          <p class="w3-opacity">Basic</p>
+          <p>Learn Spoken english for better communication.</p>
+          <p><button class="w3-button button-course  w3-brown w3-block">Coming Soon</button></p>
+        </div>
+      </div>
+    </div>
+
+<div class="w3-third w3-margin-bottom  w3-hover-shadow">
+      <div class="w3-card">
+
+        <div class="w3-container">
+          <h3>Fundamental Mathematics</h3>
+          <p class="w3-opacity">Basic</p>
+          <p>Learn basic arithmetics operations.</p>
+          <p><button class="w3-button button-course  w3-brown w3-block">Coming Soon</button></p>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="w3-third w3-margin-bottom  w3-hover-shadow">
+      <div class="w3-card">
+
+        <div class="w3-container">
+          <h3>English Grammar</h3>
+          <p class="w3-opacity">Basic</p>
+          <p>Improve Your grammar.</p>
+          <p><button class="w3-button button-course  w3-brown w3-block">Coming Soon</button></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<div class="w3-row w3-container">
+    <div class="w3-center w3-padding-64">
+      <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">Upload Courses</span>
+    </div>
+    <div class="w3-col l3 m6 w3-light-blue w3-margin-bottom w3-container w3-padding-16 sam">
+      <h3>Choose a course</h3>
+      <p>Choose a course of your choice.</p>
+    </div>
+
+    <div class="w3-col l3 m6 w3-cyan w3-margin-bottom w3-container w3-padding-16 sam">
+      <h3>Select Modules</h3>
+      <p>Select the modules in the course.</p>
+    </div>
+
+    <div class="w3-col l3 m6 w3-blue w3-margin-bottom w3-container w3-padding-16 sam">
+      <h3>Enter Details</h3>
+      <p>Enter the details of the course.</p>
+    </div>
+
+    <div class="w3-col l3 m6 w3-indigo w3-margin-bottom w3-container w3-padding-16 sam">
+      <h3>Upload</h3>
+      <p>Upload the course for the public use by giving video links and a google drive link of documentation.</p>
+    </div>
+</div>
+ <div class="w3-row w3-container">
+     <div class="w3-col l6  w3-margin-bottom   w3-hover-shadow">
+      <div class="w3-card">
+
+        <div class="w3-container">
+          <h3>Academic Courses</h3>
+          <p class="w3-opacity">Courses for academic purposes</p>
+          <p>These courses are focused on the acadecmic development of women.</p>
+          <p><a href=" upload.html" target="_blank " ><button class="w3-button button-course  w3-blue w3-block">Upload</button></a></p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l6 w3-margin-bottom  w3-hover-shadow">
+      <div class="w3-card">
+
+        <div class="w3-container">
+          <h3>Vocational Courses</h3>
+          <p class="w3-opacity">Courses for vocational purposes</p>
+          <p>These courses focus on the vocational skills which can be kearned by females.</p>
+         <p><a href=" upload.html" target="_blank " ><button class="w3-button button-course  w3-blue w3-block">Upload</button></a></p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+    <!-- Grid -->
+  <div class="w3-row-padding" id="about">
+    <div class="w3-center w3-padding-64">
+      <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">Buy Course Kit</span>
+    </div>
+
+    <div class="w3-third w3-margin-bottom">
+      <div class="w3-card-4">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrePkp-WMKdWmWmm3j3GHAuYtn03Ut4mJ5M7he94HSo5U4JGRX" alt="Tailoring" style="width:100%">
+        <div class="w3-container">
+          <h3>Tailoring Kit</h3>
+          <p class="w3-opacity">Tailoring</p>
+          <p>Learn professional tailoring for different dresses.</p>
+          <p><button class="w3-button w3-amber w3-block">Buy</button></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-third w3-margin-bottom">
+      <div class="w3-card-4">
+        <img src="https://cdn.shopify.com/s/files/1/1344/0437/products/IMG_2160_large_b3a254a3-5e17-4eae-b0b9-cb4d400a9c80_900x.JPG?v=1500647432" alt="Art" class="w3-image">
+        <div class="w3-container">
+          <h3>Art and Craft Kit</h3>
+          <p class="w3-opacity">Art and Designing</p>
+          <p>Learn professional art and design.</p>
+          <p><button class="w3-button w3-amber w3-block">Buy</button></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-third w3-margin-bottom">
+      <div class="w3-card-4">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPg7WCKe_mp33o_yDTPrWs9cpQfvYkyxVnNPuviMrg345RRXpkwg" alt="Course Material" style="width:100%">
+        <div class="w3-container">
+          <h3>Course Material</h3>
+          <p class="w3-opacity">Books and CD</p>
+          <p>Get various books and relavent media devices.</p>
+          <p><button class="w3-button w3-amber w3-block">Buy</button></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+    <div class="w3-row w3-container">
+    <div class="w3-center w3-padding-64">
+      <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">Certification</span>
+    </div>
+     <div class="w3-row  w3-margin-bottom w3-container w3-padding-16">
+    <center><img src="cert.jpg"  class="w3-image" alt="Sample certificate" ></center>
+  </div>
+
+    <div class="w3-col l3 m6 w3-lime w3-margin-bottom w3-container w3-padding-16 sam">
+      <h3>Choose a Course</h3>
+      <p>Choose a course from the catalog.</p>
+    </div>
+
+    <div class="w3-col l3 m6 w3-light-green w3-margin-bottom w3-container w3-padding-16 sam">
+      <h3>Enter Details</h3>
+      <p>Enter your details for the course.</p>
+    </div>
+
+    <div class="w3-col l3 m6 w3-green w3-margin-bottom w3-container w3-padding-16 sam">
+      <h3>Pass basic Level exam</h3>
+      <p>Pass the basic level exam of the course.</p>
+    </div>
+
+    <div class="w3-col l3 m6 w3-teal w3-margin-bottom w3-container w3-padding-16 sam">
+      <h3>Get your certificate</h3>
+      <p>Recieve your certificates.</p>
+    </div>
+</div>
+
+
+
+
+
+
+  </div>
+
+
+<!-- Footer -->
+
+<footer class="w3-container w3-padding-32 w3-light-grey w3-center">
+
+  <a href="#" class="w3-button w3-black w3-margin"><i class="fa fa-arrow-up" ></i></a>
+  <div class="w3-xlarge w3-section">
+    <i class="fa fa-facebook-official  w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity "></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity "></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity "></i>
+  </div>
+
+</footer>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+<script>
+// Initialize Firebase
+var config = {
+  apiKey: 'AIzaSyBNsNrL1MzxVnMzdyiLY6z0y4Fra1xRHCE',
+  authDomain: 'fir-example-feb98.firebaseapp.com',
+  databaseURL: 'https://fir-example-feb98.firebaseio.com',
+  projectId: 'fir-example-feb98',
+  storageBucket: 'fir-example-feb98.appspot.com',
+  messagingSenderId: '461213066300'
+};
+
+firebase.initializeApp(config);
+</script>
+<script src="login.js"></script>
+
+
+<script>
+// Slideshow
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs((slideIndex += n));
+}
+
+function currentDiv(n) {
+  showDivs((slideIndex = n));
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName('mySlides');
+  var dots = document.getElementsByClassName('demodots');
+  if (n > x.length) {
+    slideIndex = 1;
+  }
+  if (n < 1) {
+    slideIndex = x.length;
+  }
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = 'none';
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(' w3-white', '');
+  }
+  x[slideIndex - 1].style.display = 'block';
+  dots[slideIndex - 1].className += ' w3-white';
+}
+</script>
+
+</body>
+</html>

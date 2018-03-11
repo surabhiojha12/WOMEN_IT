@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+<title></title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<style>
+html,body,h1,h2,h3,h4 {font-family:"Lato", sans-serif}
+.mySlides {display:none}
+.w3-tag, .fa {cursor:pointer}
+.w3-tag {height:15px;width:15px;padding:0;margin-top:6px}
+.w3-card-4:hover{
+  box-shadow: grey;
+
+}
+.sam{
+  height:200px;
+}
+
+</style>
+<body>
+
+<!-- Links (sit on top) -->
+<div class="w3-top">
+
+  <div class="w3-row w3-large  w3-indigo" style="font-style: italic;">
+    <div class="w3-col s3">
+      <a href="index.html" class="w3-button  w3-block"><i class="fa fa-home"></i> Home</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="course.html" class="w3-button w3-block"><i class="fa fa-pencil-square-o"></i> Courses</a>
+    </div>
+
+    <div class="w3-col s3">
+      <a href="#" class="w3-button  w3-block"><i class="fa fa-money"></i> Jobs</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="profile.html" class="w3-button w3-block"><i class="fa fa-user-circle"></i> Profile</a>
+    </div>
+
+  </div>
+</div>
+
+<!-- Content -->
+<div class="w3-content" style="max-width:1100px;margin-top:80px;margin-bottom:80px">
+
+  <div class="w3-panel">
+    <h1><b>JOBS</b></h1>
+    <p></p>
+  </div>
+
+  <!-- Slideshow -->
+  <div class="w3-container">
+    <div class="w3-display-container mySlides">
+      <img class="w3-image" src="j3.jpg" style="width:100%;">
+
+      <div class="w3-display-topleft w3-container w3-padding-32">
+        <span class="w3-white w3-padding-large w3-animate-bottom">Select City</span>
+      </div>
+    </div>
+    <div class="w3-display-container mySlides">
+      <img src="j2.png" style="width:100%">
+      <div class="w3-display-middle w3-container w3-padding-32">
+        <span class="w3-white w3-padding-large w3-animate-bottom">Finish the job</span>
+      </div>
+    </div>
+    <div class="w3-display-container mySlides">
+      <img src="j1.jpg" style="width:100%">
+      <div class="w3-display-topright w3-container w3-padding-32">
+        <span class="w3-white w3-padding-large w3-animate-bottom">Get paid</span>
+      </div>
+    </div>
+
+    <!-- Slideshow next/previous buttons -->
+    <div class="w3-container w3-blue w3-padding w3-xlarge">
+      <div class="w3-left" onclick="plusDivs(-1)"><i class="fa fa-arrow-circle-left w3-hover-text-teal"></i></div>
+      <div class="w3-right" onclick="plusDivs(1)"><i class="fa fa-arrow-circle-right w3-hover-text-teal"></i></div>
+
+      <div class="w3-center">
+        <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+        <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+        <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Grid -->
+  <div class="w3-row w3-container">
+    <div class="w3-center w3-padding-64">
+      <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">How It Works</span>
+    </div>
+    <div class="w3-col l3 m6 w3-khaki w3-container w3-padding-16 sam">
+      <h3>Enter City</h3>
+      <p>Enter the city you wanna find a job in.</p>
+    </div>
+
+    <div class="w3-col l3 m6 w3-yellow w3-container w3-padding-16 sam">
+      <h3>Post your job</h3>
+      <p>Post your own job</p>
+    </div>
+
+    <div class="w3-col l3 m6 w3-amber w3-container w3-padding-16 sam">
+      <h3>Or find jobs which fits you</h3>
+      <p>Or find a job for yourself</p>
+    </div>
+
+    <div class="w3-col l3 m6 w3-orange w3-container w3-padding-16 sam">
+      <h3>Complete the job get paid</h3>
+      <p>Get paid for the skills you have.</p>
+    </div>
+  </div>
+
+
+
+  <!-- Grid -->
+  <div class="w3-row-padding" id="about">
+    <div class="w3-center w3-padding-64">
+      <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">Job Section</span>
+    </div>
+
+<button onclick="myFunction('Demo2')" class="w3-btn w3-xlarge w3-block w3-purple">
+Post a job</button>
+<div id="Demo2" class="w3-hide w3-container  ">
+
+ <div class="w3-container">
+  <div class="w3-section">
+      <label>Country</label>
+      <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" type="text" name="country" id="con" required>
+    </div>
+    <div class="w3-section">
+      <label>City</label>
+      <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" type="text" name="city" id="city" required>
+    </div>
+    <div class="w3-section">
+      <label>Job Title</label>
+      <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" type="text" name="title" id="title" required>
+    </div>
+    <div class="w3-section">
+      <label>Job Description</label>
+      <textarea class="w3-input w3-border w3-hover-border-black" style="width:100%;" rows="5" name="description" id="jdesc" required></textarea>
+    </div>
+
+    <button onclick="addd()" class="w3-button w3-block w3-indigo w3-hover-light-blue">Post</button>
+
+
+
+
+
+
+  </div>
+</div>
+<br>
+<div class="w3-row-padding" id="about">
+    <div class="w3-center w3-padding-20">
+      <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16"></span>
+    </div>
+
+<button onclick="myFunction('Demo3')" class="w3-btn w3-xlarge w3-block w3-green">
+Search for jobs</button>
+<div id="Demo3" class="w3-hide  w3-container  ">
+
+
+
+
+      <div class="w3-section w3-row w3-center">
+        <div class="w3-col s5">
+      <input class="w3-input w3-col-s9 w3-border w3-hover-border-black" style="width:100%;" placeholder="Enter Your City " id="spane" type="text" name="country" required>
+    </div>
+        <div class="w3-col s2">
+      <button  onclick="search()" class="w3-button w3-col-s3 w3-block w3-indigo w3-hover-light-blue"><i class="fa fa-search"></i></button>
+    </div>
+      </div>
+
+
+    <div class="w3-display-container well" id="sam"><!--
+      <div class="w3-section">
+      <label>Job Posted By</label>
+      <div class="w3-input w3-border w3-hover-border-black w3-white" style="width:100%;" >
+        <p></p>
+    </div>
+  </div>
+      <div class="w3-section">
+      <label>Country</label>
+      <div class="w3-input w3-border w3-hover-border-black w3-white" style="width:100%;" >
+        <p></p>
+    </div>
+  </div>
+    <div class="w3-section">
+      <label>City</label>
+      <div class="w3-input w3-border w3-hover-border-black w3-white" style="width:100%;" >
+        <p></p>
+    </div>
+  </div>
+    <div class="w3-section">
+      <label>Job Title</label>
+      <div class="w3-input w3-border w3-hover-border-black w3-white" style="width:100%;" >
+        <p></p>
+    </div>
+  </div>
+    <div class="w3-section">
+      <label>Job Description</label>
+      <div class="w3-input w3-border w3-hover-border-black w3-white" style="width:100%;" >
+        <p></p>
+      </div>
+    </div>
+
+    <button  class="w3-button w3-block w3-amber w3-hover-khaki">Select </button>-->
+    </div>
+
+
+  </div>
+
+</div>
+
+  </div>
+</div>
+
+<!-- Footer -->
+
+<footer class="w3-container w3-padding-32 w3-light-grey w3-center">
+
+  <a href="#" class="w3-button w3-black w3-margin"><i class="fa fa-arrow-up" ></i></a>
+  <div class="w3-xlarge w3-section">
+    <i class="fa fa-facebook-official  w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity "></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity "></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity "></i>
+  </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+<script>
+// Initialize Firebase
+var config = {
+  apiKey: 'AIzaSyBNsNrL1MzxVnMzdyiLY6z0y4Fra1xRHCE',
+  authDomain: 'fir-example-feb98.firebaseapp.com',
+  databaseURL: 'https://fir-example-feb98.firebaseio.com',
+  projectId: 'fir-example-feb98',
+  storageBucket: 'fir-example-feb98.appspot.com',
+  messagingSenderId: '461213066300'
+};
+
+firebase.initializeApp(config);
+</script>
+<script src="log.js"></script>
+<script src="job.js"></script>
+
+<script>
+// Slideshow
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs((slideIndex += n));
+}
+
+function currentDiv(n) {
+  showDivs((slideIndex = n));
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName('mySlides');
+  var dots = document.getElementsByClassName('demodots');
+  if (n > x.length) {
+    slideIndex = 1;
+  }
+  if (n < 1) {
+    slideIndex = x.length;
+  }
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = 'none';
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(' w3-white', '');
+  }
+  x[slideIndex - 1].style.display = 'block';
+  dots[slideIndex - 1].className += ' w3-white';
+}
+</script>
+<script>
+function myFunction(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf('w3-show') == -1) {
+    x.className += ' w3-show';
+  } else {
+    x.className = x.className.replace(' w3-show', '');
+  }
+}
+</script>
+
+
+</body>
+</html>

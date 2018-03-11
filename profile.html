@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<title></title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<style>
+html,body,h1,h2,h3,h4 {font-family:"Lato", sans-serif}
+.mySlides {display:none}
+.w3-tag, .fa {cursor:pointer}
+.w3-tag {height:15px;width:15px;padding:0;margin-top:6px}
+.w3-card-4:hover{
+  box-shadow: grey;
+
+}
+
+
+</style>
+<body>
+
+<!-- Links (sit on top) -->
+<div class="w3-top">
+
+  <div class="w3-row w3-large  w3-indigo" style="font-style: italic;">
+    <div class="w3-col s3">
+      <a href="index.html" class="w3-button  w3-block"><i class="fa fa-home"></i> Home</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="course.html" class="w3-button w3-block"><i class="fa fa-pencil-square-o"></i> Courses</a>
+    </div>
+
+    <div class="w3-col s3">
+      <a href="job.html" class="w3-button  w3-block"><i class="fa fa-money"></i> Jobs</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#" class="w3-button w3-block"><i class="fa fa-user-circle"></i> Profile</a>
+    </div>
+
+  </div>
+</div>
+<!--profile-->
+<div class="w3-content" style="max-width:1100px;margin-top:80px;margin-bottom:80px">
+  <div class="w3-panel">
+    <h1><b>PROFILE </b></h1>
+    <hr>
+    <p></p>
+  </div>
+
+<div class="w3-row-padding" id="about">
+    <div class="w3-center w3-padding-20">
+      <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16"></span>
+    </div>
+
+<div class="w3-display-container well">
+  <button type="submit" class="w3-button w3-block w3-xlarge w3-blue w3-hover-light-blue">Profile Details</button>
+      <div class="w3-section">
+      <label>First Name</label>
+      <div class="w3-input w3-border w3-hover-border-black w3-white" style="width:100%;" >
+        <p id="firstnm"></p>
+    </div>
+  </div>
+  <div class="w3-section">
+      <label>Last Name</label>
+      <div class="w3-input w3-border w3-hover-border-black w3-white" style="width:100%;" >
+        <p id="lastnm"></p>
+    </div>
+  </div>
+      <div class="w3-section">
+      <label>Country</label>
+      <div class="w3-input w3-border w3-hover-border-black w3-white" style="width:100%;" >
+        <p id="nato"></p>
+    </div>
+  </div>
+    <div class="w3-section">
+      <label>City</label>
+      <div class="w3-input w3-border w3-hover-border-black w3-white" style="width:100%;" >
+        <p id="ci"></p>
+    </div>
+  </div>
+    <div class="w3-section">
+      <label>Phone Number</label>
+      <div class="w3-input w3-border w3-hover-border-black w3-white" style="width:100%;" >
+        <p id="pno"></p>
+    </div>
+  </div>
+    <div class="w3-section">
+      <label>Email</label>
+      <div class="w3-input w3-border w3-hover-border-black w3-white" style="width:100%;" >
+        <p id="ema"></p>
+      </div>
+    </div>
+
+
+    </div>
+
+
+  </div>
+<!--end-->
+<br>
+<!--portfolio-->
+<div class="w3-row-padding" id="about">
+    <div class="w3-center w3-padding-20">
+      <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16"></span>
+    </div>
+    <button onclick="myFunction('Demo2')" class="w3-button w3-block w3-xlarge w3-purple w3-hover-pink ">
+Upload</button>
+<div id="Demo2" class="w3-hide w3-container well  ">
+
+
+
+  <div class="w3-section">
+      <label>Enter Name</label>
+      <input class="w3-input w3-border w3-hover-border-black" id="tit" style="width:100%;" type="text" name="country" required>
+    </div>
+    <div class="w3-section">
+      <label>Enter Short Description</label>
+      <input class="w3-input w3-border w3-hover-border-black" id="sd" style="width:100%;" type="text" name="city" required>
+    </div>
+
+    <div class="w3-section">
+      <label>Upload Image link</label>
+      <input class="w3-input w3-border w3-hover-border-black" id="dlink" style="width:100%;" type="text" name="city" required>
+    </div>
+
+    <button onclick="ncourse()" class="w3-button w3-block w3-indigo w3-hover-light-blue">Submit</button>
+
+
+</div>
+
+  </div>
+  <!--end-->
+  <hr>
+  <!--portfolio-->
+<div class="w3-row-padding" id="about">
+    <div class="w3-center w3-padding-20">
+      <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16"></span>
+    </div>
+    <button onclick="myFunction('Demo3')" class="w3-button w3-block w3-xlarge w3-red w3-hover-pink ">
+Portfolio</button>
+<div id="Demo3" class="w3-hide w3-container well  ">
+    <button onclick="face()" class="w3-button w3-block w3-xlarge w3-red w3-hover-pink ">View </button>
+    <div id="Demo4" class="w3-container well  ">
+    </div>
+    <label>Name</label>
+    <div class="w3-input w3-border w3-hover-border-black w3-white" style="width:100%;" >
+      <p id="nm1"></p>
+      <label>Description</label>
+      <div class="w3-input w3-border w3-hover-border-black w3-white" style="width:100%;" >
+        <p id="nm2"></p>
+
+
+
+
+
+</div>
+
+  </div>
+  <!--end-->
+
+
+</div>
+<!-- Footer -->
+</div>
+</div>
+<div>
+<footer class="w3-container w3-padding-32 w3-light-grey w3-center">
+  <button class="w3-button  w3-black w3-hover-teal w3-center " style="width:10%" onclick="logii()">Update</button>
+  <button class="w3-button  w3-black w3-hover-teal w3-center " style="width:10%" onclick="logi()">Logout</button>
+
+  <a href="#" class="w3-button w3-black w3-margin"><i class="fa fa-arrow-up" ></i></a>
+  <div class="w3-xlarge w3-section">
+    <i class="fa fa-facebook-official  w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity "></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity "></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity "></i>
+  </div>
+
+</footer>
+
+
+
+
+
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+<script>
+// Initialize Firebase
+var config = {
+  apiKey: 'AIzaSyBNsNrL1MzxVnMzdyiLY6z0y4Fra1xRHCE',
+  authDomain: 'fir-example-feb98.firebaseapp.com',
+  databaseURL: 'https://fir-example-feb98.firebaseio.com',
+  projectId: 'fir-example-feb98',
+  storageBucket: 'fir-example-feb98.appspot.com',
+  messagingSenderId: '461213066300'
+};
+
+firebase.initializeApp(config);
+</script>
+
+<script src="profile.js"></script>
+<script>
+function myFunction(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf('w3-show') == -1) {
+    x.className += ' w3-show';
+  } else {
+    x.className = x.className.replace(' w3-show', '');
+  }
+}
+</script>
+</body>
+</html>
